@@ -20,7 +20,7 @@ const Home = () => {
         />
       </div>
 
-      <div id="about" className="m-10 flex">
+      <div id="about" className="mx-10 my-20 flex">
         <div className="w-[50%] mx-10">
           <p className="text-lg underline underline-offset-4 uppercase text-slate-600 font-semibold">
             About Our Company
@@ -46,7 +46,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="my-10 shadow-lg relative max-w-full max-h-[400px] rounded-3xl">
+      <div className="my-20 shadow-lg relative max-w-full max-h-[400px] rounded-3xl">
         <div className="absolute z-10 mx-10 text-white">
           <p className="uppercase my-[5em] text-slate-600 font-semibold">
             What Can We Do For You?
@@ -72,7 +72,7 @@ const Home = () => {
         />
       </div>
 
-      <div id="services" className="m-10 flex">
+      <div id="services" className="mx-10 my-20 flex">
         <div className="w-[50%] mx-10">
           <p className="text-lg underline underline-offset-4 uppercase text-slate-600 font-semibold">
             Services
@@ -99,7 +99,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div id="products" className="rounded-3xl bg-slate-50">
+      <div id="products" className="my-20 rounded-3xl bg-slate-50">
         <div className="mx-10">
           <div className="m-10 py-5">
             <p className="text-lg underline underline-offset-4 uppercase text-slate-600 font-semibold my-5">
