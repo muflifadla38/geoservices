@@ -26,17 +26,17 @@ const Header = () => {
         <ul className="md:flex md:justify-between align-middle m-2 p-2">
           <li className="my-auto">
             <Link href="#about">
-              <a className="hover:text-violet-600">About</a>
+              <a className="hover:text-slate-500">About</a>
             </Link>
           </li>
           <li className="my-auto">
             <Link href="#services">
-              <a className="hover:text-violet-600">Services</a>
+              <a className="hover:text-slate-500">Services</a>
             </Link>
           </li>
           <li className="my-auto">
             <Link href="/#products">
-              <a className="hover:text-violet-600">Products</a>
+              <a className="hover:text-slate-500">Products</a>
             </Link>
           </li>
           <li className="my-auto">
@@ -53,17 +53,17 @@ const Header = () => {
           </li>
           <li className="my-auto">
             <Link href="/#locations">
-              <a className="hover:text-violet-600">Locations</a>
+              <a className="hover:text-slate-500">Locations</a>
             </Link>
           </li>
           <li className="my-auto">
             <Link href="/#contact">
-              <a className="hover:text-violet-600">Contact</a>
+              <a className="hover:text-slate-500">Contact</a>
             </Link>
           </li>
           <li className="my-auto">
             <Link href="/language">
-              <a className="hover:text-violet-600">English</a>
+              <a className="hover:text-slate-500">English</a>
             </Link>
           </li>
         </ul>
