@@ -11,7 +11,7 @@ const Footer = () => {
               <Image
                 src="/logo-3.png"
                 alt="Geoenvi Logo"
-                width={90}
+                width={113.5}
                 height={40}
               />
             </a>
