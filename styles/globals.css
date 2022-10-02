@@ -6,4 +6,7 @@
   .product-item {
     @apply flex my-10;
   }
+  .list ul li {
+    @apply my-2;
+  }
 }
