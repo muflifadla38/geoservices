@@ -454,7 +454,52 @@ const Home = () => {
                       petrochemicals team runs positions in
                     </p>
                     <br />
-                    <p>ADA SESUATU DISINI</p>
+                    <div className="list">
+                      <ul className="flex list-disc ml-4">
+                        <div className="w-[33%]">
+                          <li>Acetates</li>
+                          <li>Caustic Soda</li>
+                          <li>Ethylene</li>
+                          <li>PA</li>
+                          <li>Polyethylene</li>
+                          <li>VAM</li>
+                        </div>
+                        <div className="w-[33%]">
+                          <li>Acrylics</li>
+                          <li>DEG</li>
+                          <li>EDC</li>
+                          <li>PVC</li>
+                          <li>Polypropylene</li>
+                          <li>VCM</li>
+                        </div>
+                        <div className="w-[33%]">
+                          <li>Benzene</li>
+                          <li>2EH</li>
+                          <li>IPA</li>
+                          <li>PTA</li>
+                          <li>Styrene Monomer</li>
+                        </div>
+                      </ul>
+                    </div>
+                    {/* <ul className="list-disc w-[33%] row">
+                      <li>1</li>
+                      <li>2</li>
+                      <li>3</li>
+                      <li>4</li>
+                      <li>5</li>
+                      <li>6</li>
+                      <li>7</li>
+                      <li>8</li>
+                      <li>9</li>
+                      <li>10</li>
+                      <li>11</li>
+                      <li>12</li>
+                      <li>13</li>
+                      <li>14</li>
+                      <li>15</li>
+                      <li>16</li>
+                      <li>17</li>
+                    </ul> */}
                     <br />
                     <p>
                       Our petrochemical portfolio grows 35 to 50% year on year
