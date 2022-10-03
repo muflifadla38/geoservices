@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <>
       <div
-        id="carousels"
+        id="carousels-section"
         className="shadow-lg relative max-w-full max-h-[680px] rounded-3xl"
       >
         <div className="absolute my-[25%] backdrop-blur-sm w-full h-20 bg-white/30 z-10 text-center text-white">
@@ -20,7 +20,7 @@ const Home = () => {
         />
       </div>
 
-      <div id="about" className="mx-10 my-20 flex">
+      <div id="about-section" className="mx-10 my-20 flex">
         <div className="w-[50%] mx-10">
           <p className="text-lg underline underline-offset-4 uppercase text-slate-600 font-semibold">
             About Our Company
@@ -72,7 +72,7 @@ const Home = () => {
         />
       </div>
 
-      <div id="services" className="mx-10 my-20 flex">
+      <div id="services-section" className="mx-10 my-20 flex">
         <div className="w-[50%] mx-10">
           <p className="text-lg underline underline-offset-4 uppercase text-slate-600 font-semibold">
             Services
@@ -99,7 +99,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div id="products" className="my-20 rounded-3xl bg-slate-50">
+      <div id="products-section" className="my-20 rounded-3xl bg-slate-50">
         <div className="mx-10">
           <div className="m-10 py-5">
             <p className="text-lg underline underline-offset-4 uppercase text-slate-600 font-semibold my-5">
@@ -548,6 +548,60 @@ const Home = () => {
                   className="object-cover rounded-xl brightness-75"
                 />
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="contact-section" className="my-20">
+        <div className="text-center w-full"></div>
+        <div className="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto  text-slate-900 rounded-lg shadow-md">
+          <div className="flex flex-col justify-between">
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
+                Lets talk about everything!
+              </h2>
+              <div className="text-slate-700 mt-8">
+                Hate forms? Send us an <span className="underline">email</span>{" "}
+                instead.
+              </div>
+            </div>
+            <div className="mt-8 text-center"></div>
+          </div>
+          <div className="">
+            <div>
+              <span className="text-sm text-slate-600 font-bold">
+                Full Name
+              </span>
+              <input
+                className="w-full bg-slate-100 border-transparent text-slate-900 mt-2 rounded-lg focus:outline-none focus:shadow-outline"
+                type="text"
+                placeholder=""
+              />
+            </div>
+            <div className="mt-8">
+              <span className="text-sm text-slate-600 font-bold">Email</span>
+              <input
+                className="w-full bg-slate-100 border-transparent text-slate-900 mt-2 rounded-lg focus:outline-none focus:shadow-outline"
+                type="email"
+              />
+            </div>
+            <div class="mt-8">
+              <span className="text-sm text-slate-600 font-bold">Whatsapp</span>
+              <input
+                className="w-full bg-slate-100 border-transparent text-slate-900 mt-2 rounded-lg focus:outline-none focus:shadow-outline"
+                type="tel"
+                placeholder=""
+              />
+            </div>
+            <div className="mt-8">
+              <span className="text-sm text-slate-600 font-bold">Message</span>
+              <textarea className="w-full h-32 bg-slate-100 border-transparent text-slate-900 mt-2 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+            </div>
+            <div className="mt-8 text-right">
+              <button className="text-sm font-bold tracking-wide bg-indigo-500 py-2 px-4 text-slate-100 rounded-lg hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                Send
+              </button>
             </div>
           </div>
         </div>
