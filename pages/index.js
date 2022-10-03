@@ -574,31 +574,43 @@ const Home = () => {
                 Full Name
               </span>
               <input
-                className="w-full bg-slate-100 border-transparent text-slate-900 mt-2 rounded-lg focus:outline-none focus:shadow-outline"
+                className="w-full bg-slate-100 border-transparent text-slate-900 mt-2 rounded-lg focus:outline-none focus:shadow-outline peer"
                 type="text"
                 placeholder=""
               />
+              <p class="my-2 hidden peer-invalid:block text-pink-600 text-sm">
+                Please enter your name
+              </p>
             </div>
-            <div className="mt-8">
+            <div className="mt-6">
               <span className="text-sm text-slate-600 font-bold">Email</span>
               <input
-                className="w-full bg-slate-100 border-transparent text-slate-900 mt-2 rounded-lg focus:outline-none focus:shadow-outline"
+                className="w-full bg-slate-100 border-transparent text-slate-900 mt-2 rounded-lg focus:outline-none focus:shadow-outline peer"
                 type="email"
               />
+              <p class="my-2 hidden peer-invalid:block text-pink-600 text-sm">
+                Please enter a valid email address
+              </p>
             </div>
-            <div class="mt-8">
+            <div class="mt-6">
               <span className="text-sm text-slate-600 font-bold">Whatsapp</span>
               <input
-                className="w-full bg-slate-100 border-transparent text-slate-900 mt-2 rounded-lg focus:outline-none focus:shadow-outline"
+                className="w-full bg-slate-100 border-transparent text-slate-900 mt-2 rounded-lg focus:outline-none focus:shadow-outline peer"
                 type="tel"
                 placeholder=""
               />
+              <p class="my-2 hidden peer-invalid:block text-pink-600 text-sm">
+                Please enter a valid whatsapp number
+              </p>
             </div>
-            <div className="mt-8">
+            <div className="mt-6">
               <span className="text-sm text-slate-600 font-bold">Message</span>
-              <textarea className="w-full h-32 bg-slate-100 border-transparent text-slate-900 mt-2 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+              <textarea className="w-full h-32 bg-slate-100 border-transparent text-slate-900 mt-2 rounded-lg focus:outline-none focus:shadow-outline peer" />
+              <p class="my-2 hidden peer-invalid:block text-pink-600 text-sm">
+                This field cannot empty
+              </p>
             </div>
-            <div className="mt-8 text-right">
+            <div className="mt-6 text-right">
               <button className="text-sm font-bold tracking-wide bg-indigo-500 py-2 px-4 text-slate-100 rounded-lg hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                 Send
               </button>
