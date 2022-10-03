@@ -23,19 +23,19 @@ const Header = () => {
       }
     >
       <nav className="text-center font-semibold">
-        <ul className="md:flex md:justify-between align-middle m-2 p-2">
+        <ul className="md:flex md:justify-between align-middle p-2">
           <li className="my-auto">
-            <Link href="#about">
+            <Link href="#about-section">
               <a className="hover:text-slate-500">About</a>
             </Link>
           </li>
           <li className="my-auto">
-            <Link href="#services">
+            <Link href="#services-section">
               <a className="hover:text-slate-500">Services</a>
             </Link>
           </li>
           <li className="my-auto">
-            <Link href="/#products">
+            <Link href="/#products-section">
               <a className="hover:text-slate-500">Products</a>
             </Link>
           </li>
@@ -52,12 +52,12 @@ const Header = () => {
             </Link>
           </li>
           <li className="my-auto">
-            <Link href="/#locations">
+            <Link href="/#locations-section">
               <a className="hover:text-slate-500">Locations</a>
             </Link>
           </li>
           <li className="my-auto">
-            <Link href="/#contact">
+            <Link href="/#contact-section">
               <a className="hover:text-slate-500">Contact</a>
             </Link>
           </li>
