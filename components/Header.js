@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 const Header = () => {
   const [scroll, setScroll] = useState(false);
   const newClass = scroll
-    ? "lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06]"
+    ? "bg-opacity-75 backdrop-filter backdrop-blur-sm lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06]"
     : "";
 
   useEffect(() => {
@@ -36,7 +36,7 @@ const Header = () => {
           </li>
           <li className="my-auto">
             <Link href="/#products-section">
-              <a className="hover:text-slate-500">Products</a>
+              <a className="hover:text-slate-500">Projects</a>
             </Link>
           </li>
           <li className="my-auto">
@@ -52,8 +52,8 @@ const Header = () => {
             </Link>
           </li>
           <li className="my-auto">
-            <Link href="/#locations-section">
-              <a className="hover:text-slate-500">Locations</a>
+            <Link href="/#blog-section">
+              <a className="hover:text-slate-500">Blog</a>
             </Link>
           </li>
           <li className="my-auto">
