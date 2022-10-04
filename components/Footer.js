@@ -155,8 +155,13 @@ const Footer = () => {
       </div>
       <div className="flex flex-col items-start justify-between pt-10 mt-10 border-t border-gray-100 md:flex-row md:items-center">
         <p className="mb-2 text-xs text-left text-gray-600 md:mb-0">
-          &copy; Copyright {new Date().getFullYear()} <a href="/">TTOIL</a>. All
-          rights Reserved.
+          &copy; Copyright {new Date().getFullYear()}{" "}
+          <strong>
+            <Link href="/">
+              <a>TTOIL</a>
+            </Link>
+          </strong>
+          . All rights Reserved.
         </p>
         <div className="flex items-center space-x-6 text-slate-400">
           <a
