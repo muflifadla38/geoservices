@@ -24,23 +24,6 @@ const Footer = () => {
             .
           </p>
         </div>
-        <nav className="col-span-1 md:col-span-1 lg:col-span-2">
-          <p className="mb-3 text-xs font-semibold tracking-wider text-slate-400 uppercase">
-            About
-          </p>
-          <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-purple-800"
-            href="#"
-          >
-            Who are We
-          </a>
-          <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-purple-800"
-            href="#"
-          >
-            Our Company
-          </a>
-        </nav>
         <nav className="col-span-2 md:col-span-1 lg:col-span-2">
           <p className="mb-3 text-xs font-semibold tracking-wider text-slate-400 uppercase">
             Services
@@ -121,6 +104,23 @@ const Footer = () => {
             href="#"
           >
             Survey Mapping
+          </a>
+        </nav>
+        <nav className="col-span-1 md:col-span-1 lg:col-span-2">
+          <p className="mb-3 text-xs font-semibold tracking-wider text-slate-400 uppercase">
+            About
+          </p>
+          <a
+            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-purple-800"
+            href="#"
+          >
+            Who are We
+          </a>
+          <a
+            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-purple-800"
+            href="#"
+          >
+            Our Company
           </a>
         </nav>
         <nav className="col-span-1 md:col-span-1 lg:col-span-2">
