@@ -86,9 +86,11 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header
+    <Popover
+      as="header"
       className={
-        "bg-white my-6 lg:my-8 transition " + (scroll ? scrollClass : "")
+        "relative bg-white my-6 lg:my-8 transition " +
+        (scroll ? scrollClass : "")
       }
     >
       <div className="px-4 py-3 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 ">
@@ -161,16 +163,30 @@ const Header = () => {
             </li>
           </ul>
           <div className="lg:hidden z-10">
-            <button
+            <Popover.Button
               aria-label="Open Menu"
               title="Open Menu"
-              className="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline"
-              onClick={() => setIsMenuOpen(true)}
+              className="inline-flex items-center justify-center rounded-md p-2 -mr-1 transition duration-200 focus:outline-none focus:shadow-outline"
             >
-              <BurgerMenuIcon className="w-6 h-6 text-slate-600" />
-            </button>
-            {isMenuOpen && (
-              <div className="absolute top-0 left-0 w-full rounded-lg shadow-lg">
+              <span className="sr-only">Open Menu</span>
+              <BurgerMenuIcon
+                className="w-6 h-6 text-slate-600"
+                aria-hidden="true"
+              />
+            </Popover.Button>
+            <Transition
+              as={Fragment}
+              enter="duration-200 ease-out"
+              enterFrom="opacity-0 scale-95"
+              enterTo="opacity-100 scale-100"
+              leave="duration-100 ease-in"
+              leaveFrom="opacity-100 scale-100"
+              leaveTo="opacity-0 scale-95"
+            >
+              <Popover.Panel
+                focus
+                className="absolute top-0 left-0 w-full rounded-lg shadow-lg"
+              >
                 <div className="p-5 bg-white border rounded-lg ">
                   <div className="flex items-center justify-between mb-4">
                     <div>
@@ -190,95 +206,118 @@ const Header = () => {
                       </Link>
                     </div>
                     <div>
-                      <button
+                      <Popover.Button
                         aria-label="Close Menu"
                         title="Close Menu"
-                        className="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                        onClick={() => setIsMenuOpen(false)}
+                        className="inline-flex items-center justify-center rounded-md p-2 -mt-2 -mr-2 transition duration-200 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                       >
-                        <XMarkIcon className="w-6 h-6 text-slate-600" />
-                      </button>
+                        <span className="sr-only">Close menu</span>
+                        <XMarkIcon
+                          className="w-6 h-6 text-slate-600"
+                          aria-hidden="true"
+                        />
+                      </Popover.Button>
                     </div>
                   </div>
-                  <nav>
-                    <ul className="space-y-4">
-                      <li>
-                        <Link href="/">
-                          <a
-                            aria-label="Home"
-                            title="Home"
-                            className="font-medium tracking-wide text-slate-700 inline-flex items-center hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md"
-                          >
-                            Home
-                          </a>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/#services-section">
-                          <a
-                            aria-label="Services"
-                            title="Services"
-                            className="font-medium tracking-wide text-slate-700 inline-flex items-center hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md"
-                          >
-                            Services
-                            <ChevronDownIcon className="w-4 h-4 ml-2" />
-                          </a>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/#projects-section">
-                          <a
-                            aria-label="Projects"
-                            title="Projects"
-                            className="font-medium tracking-wide text-slate-700 inline-flex items-center hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md"
-                          >
-                            Projects
-                            <ChevronDownIcon className="w-4 h-4 ml-2" />
-                          </a>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/#about-section">
-                          <a
-                            aria-label="About"
-                            title="About"
-                            className="font-medium tracking-wide text-slate-700 inline-flex items-center hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md"
-                          >
-                            About
-                          </a>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/#projects-section">
-                          <a
-                            aria-label="Contact"
-                            title="Contact"
-                            className="font-medium tracking-wide text-slate-700 inline-flex items-center hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md"
-                          >
-                            Contact
-                          </a>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/#projects-section">
-                          <a
-                            aria-label="Our product"
-                            title="Our product"
-                            className="font-medium tracking-wide text-slate-700 inline-flex items-center hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md"
-                          >
-                            Languages
-                          </a>
-                        </Link>
-                      </li>
+                  <nav className="divide-y-2 divide-gray-50">
+                    <ul className="pb-3">
+                      {ServicesItem.map((item) => (
+                        <li key={item.title}>
+                          <Link href={item.href}>
+                            <a
+                              aria-label="Services"
+                              title="Services"
+                              className="font-medium tracking-wide text-slate-700 inline-flex items-center hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md"
+                            >
+                              <item.icon
+                                className="w-4 h-4 flex-shrink-0 text-sky-500"
+                                aria-hidden="true"
+                              />
+                              <span className="ml-3 text-base font-medium">
+                                {item.title}
+                              </span>
+                            </a>
+                          </Link>
+                        </li>
+                      ))}
                     </ul>
+                    <ul className="py-3">
+                      {ProjectsItem.map((item) => (
+                        <li key={item.title}>
+                          <Link href={item.href}>
+                            <a
+                              aria-label="Services"
+                              title="Services"
+                              className="font-medium tracking-wide text-slate-700 inline-flex items-center hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md"
+                            >
+                              <item.icon
+                                className="w-4 h-4 flex-shrink-0 text-sky-500"
+                                aria-hidden="true"
+                              />
+                              <span className="ml-3 text-base font-medium">
+                                {item.title}
+                              </span>
+                            </a>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="space-y-6 py-3">
+                      <ul className="grid grid-cols-2 gap-y-1 gap-x-8">
+                        <li>
+                          <Link href="/">
+                            <a
+                              aria-label="Home"
+                              title="Home"
+                              className="font-medium tracking-wide text-slate-700 inline-flex items-center hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md"
+                            >
+                              Home
+                            </a>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/#about-section">
+                            <a
+                              aria-label="About"
+                              title="About"
+                              className="font-medium tracking-wide text-slate-700 inline-flex items-center hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md"
+                            >
+                              About
+                            </a>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/#projects-section">
+                            <a
+                              aria-label="Contact"
+                              title="Contact"
+                              className="font-medium tracking-wide text-slate-700 inline-flex items-center hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md"
+                            >
+                              Contact
+                            </a>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/#projects-section">
+                            <a
+                              aria-label="Our product"
+                              title="Our product"
+                              className="font-medium tracking-wide text-slate-700 inline-flex items-center hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md"
+                            >
+                              Languages
+                            </a>
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
                   </nav>
                 </div>
-              </div>
-            )}
+              </Popover.Panel>
+            </Transition>
           </div>
         </div>
       </div>
-    </header>
+    </Popover>
   );
 };
 
