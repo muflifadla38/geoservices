@@ -6,15 +6,17 @@ const Footer = () => {
     <footer className="px-4 py-12 mx-auto max-w-7xl">
       <div className="grid grid-cols-2 gap-10 mb-3 md:grid-cols-3 lg:grid-cols-11 lg:gap-20">
         <div className="col-span-3">
-          <a href="#" title="Hellonext Home Page" className="flex items-center">
-            <Image
-              src="/logo-3.png"
-              alt="Geoenvi Logo"
-              width={68.1}
-              height={24}
-            />
-            <span className="sr-only">Kutty Home Page</span>
-          </a>
+          <Link href="/" className="flex items-center">
+            <a title="TTOILHello Home Page">
+              <Image
+                src="/logo-3.png"
+                alt="Geoenvi Logo"
+                width={68.1}
+                height={24}
+              />
+              <span className="sr-only">Kutty Home Page</span>
+            </a>
+          </Link>
           <p className="my-4 text-xs leading-normal text-gray-600">
             Nda tau ini <strong>Apa mau diisikan</strong> disini. Sembarangmo
             saja dulu{" "}
@@ -29,49 +31,49 @@ const Footer = () => {
             Services
           </p>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-purple-800"
+            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             Georadar/ GPR
           </a>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-purple-800"
+            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             Geolistrik
           </a>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-purple-800"
+            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             Microseis
           </a>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-purple-800"
+            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             Drone
           </a>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-purple-800"
+            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             GPS Geodetic
           </a>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-purple-800"
+            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             MASW
           </a>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-purple-800"
+            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             Soil Investigation
           </a>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-purple-800"
+            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             Radio Detection
@@ -82,25 +84,25 @@ const Footer = () => {
             Projects
           </p>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-purple-800"
+            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             Aplikasi Konstruksi
           </a>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-purple-800"
+            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             Aplikasi Geotek
           </a>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-purple-800"
+            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             Aplikasi Lingkungan
           </a>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-purple-800"
+            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             Survey Mapping
@@ -111,13 +113,13 @@ const Footer = () => {
             About
           </p>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-purple-800"
+            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             Who are We
           </a>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-purple-800"
+            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             Our Company
@@ -128,25 +130,25 @@ const Footer = () => {
             Contact
           </p>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-purple-800"
+            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             About Us
           </a>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-purple-800"
+            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             Privacy
           </a>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-purple-800"
+            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             Terms
           </a>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-purple-800"
+            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             Status
