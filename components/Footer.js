@@ -168,7 +168,7 @@ const Footer = () => {
         <div className="flex items-center space-x-6 text-slate-400">
           <a
             href="mailto:muflyfadlasyihab@gmail.com"
-            className="hover:text-slate-500 dark:hover:text-slate-300"
+            className="hover:text-slate-500 dark:hover:text-slate-500"
           >
             <span className="sr-only">Email</span>
             <svg
@@ -191,7 +191,7 @@ const Footer = () => {
           </a>
           <a
             href="https://wa.me/6289669644474"
-            className="hover:text-slate-500 dark:hover:text-slate-300"
+            className="hover:text-slate-500 dark:hover:text-slate-500"
           >
             <span className="sr-only">Whatsapp</span>
             <svg
@@ -216,7 +216,7 @@ const Footer = () => {
           </a>
           <a
             href="https://t.me/muflifadla38"
-            className="hover:text-slate-500 dark:hover:text-slate-300"
+            className="hover:text-slate-500 dark:hover:text-slate-500"
           >
             <span className="sr-only">Telegram</span>
             <svg
@@ -241,7 +241,7 @@ const Footer = () => {
           </a>
           <a
             href="https://instagram.com/muflifadla38"
-            className="hover:text-slate-500 dark:hover:text-slate-300"
+            className="hover:text-slate-500 dark:hover:text-slate-500"
           >
             <span className="sr-only">Instagram</span>
             <svg
