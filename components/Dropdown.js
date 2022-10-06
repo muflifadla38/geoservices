@@ -35,7 +35,7 @@ const Dropdown = ({ title, items }) => {
                       className="-m-3 flex items-start rounded-lg p-3 hover:bg-slate-50"
                     >
                       <item.icon
-                        className="h-6 w-6 flex-shrink-0 text-indigo-600"
+                        className="h-6 w-6 flex-shrink-0 text-sky-500"
                         aria-hidden="true"
                       />
                       <div className="ml-4">
