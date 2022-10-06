@@ -1,10 +1,77 @@
 import { useState, useEffect, Fragment } from "react";
-import { Menu, Transition } from "@headlessui/react";
-import Image from "next/image";
-import { ChevronDownIcon, BurgerMenuIcon, XMarkIcon } from "./Icons";
+import { Popover, Transition } from "@headlessui/react";
 import Link from "next/link";
+import Image from "next/image";
+import Dropdown from "./Dropdown";
+import {
+  ChevronDownIcon,
+  BurgerMenuIcon,
+  XMarkIcon,
+  WaveIcon,
+  BoltIcon,
+  MapIcon,
+  EnvironmentIcon,
+  ConstructionIcon,
+  GeotechnicIcon,
+  ServiceIcon,
+  ProjectIcon,
+} from "./Icons";
 
-export default function Header() {
+const ServicesItem = [
+  {
+    title: "MASW",
+    description: "Bisa diberi deskripsi singkat (1 baris)",
+    href: "/services/masw",
+    icon: WaveIcon,
+  },
+  {
+    title: "Geoelectic",
+    description: "Bisa diberi deskripsi singkat (1 baris)",
+    href: "/services/geoelectric",
+    icon: BoltIcon,
+  },
+  {
+    title: "Our Services",
+    description: "Bisa diberi deskripsi singkat (1 baris)",
+    href: "/#services-section",
+    icon: ServiceIcon,
+  },
+];
+
+const ProjectsItem = [
+  {
+    title: "Construction",
+    description: "Bisa diberi deskripsi singkat (1 baris)",
+    href: "/projects/construction",
+    icon: ConstructionIcon,
+  },
+  {
+    title: "Geotechnic",
+    description: "Ini jga bisa diberi deskripsi singkat (1 baris)",
+    href: "/projects/geotechnic",
+    icon: GeotechnicIcon,
+  },
+  {
+    title: "Environment",
+    description: "Sama jga bisa diberi deskripsi singkat (1 baris)",
+    href: "/projects/environment",
+    icon: EnvironmentIcon,
+  },
+  {
+    title: "Mapping",
+    description: "Intinya bisa semua diberi deskripsi singkat (1 baris)",
+    href: "/projects/mapping",
+    icon: MapIcon,
+  },
+  {
+    title: "Our Projects",
+    description: "Bisa diberi deskripsi singkat (1 baris)",
+    href: "/#projects-section",
+    icon: ProjectIcon,
+  },
+];
+
+const Header = () => {
   const [scroll, setScroll] = useState(false);
   const scrollClass = scroll
     ? "sticky top-0 z-40 bg-opacity-75 backdrop-filter backdrop-blur-sm lg:rounded-sm lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06]"
@@ -26,7 +93,10 @@ export default function Header() {
     >
       <div className="px-4 py-3 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 ">
         <div className="relative flex items-center justify-between lg:justify-center lg:space-x-16">
-          <ul className="items-center hidden space-x-8 lg:flex">
+          <Popover.Group
+            as="ul"
+            className="items-center hidden space-x-8 lg:flex"
+          >
             <li className="hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md">
               <Link href="/">
                 <a
@@ -38,31 +108,9 @@ export default function Header() {
                 </a>
               </Link>
             </li>
-            <li className="hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md">
-              <Link href="/#services-section">
-                <a
-                  aria-label="Our Services"
-                  title="Our Services"
-                  className="font-medium tracking-wide text-slate-700 inline-flex items-center"
-                >
-                  Services
-                  <ChevronDownIcon className="w-4 h-4 ml-2" />
-                </a>
-              </Link>
-            </li>
-            <li className="hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md">
-              <Link href="/#projects-section">
-                <a
-                  aria-label="Our Projects"
-                  title="Our Projects"
-                  className="font-medium tracking-wide text-slate-700 inline-flex items-center"
-                >
-                  Projects
-                  <ChevronDownIcon className="w-4 h-4 ml-2" />
-                </a>
-              </Link>
-            </li>
-          </ul>
+            <Dropdown title={"Services"} items={ServicesItem} />
+            <Dropdown title={"Projects"} items={ProjectsItem} />
+          </Popover.Group>
           <Link href="/">
             <a
               aria-label="TTOIL"
@@ -232,4 +280,6 @@ export default function Header() {
       </div>
     </header>
   );
-}
+};
+
+export default Header;
