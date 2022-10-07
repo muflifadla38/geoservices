@@ -30,7 +30,7 @@ const Dropdown = ({ title, items }) => {
                 <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                   {items.map((item) => (
                     <a
-                      key={item.name}
+                      key={item.title}
                       href={item.href}
                       className="-m-3 flex items-start rounded-lg p-3 hover:bg-slate-50"
                     >
