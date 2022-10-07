@@ -4,20 +4,19 @@ const Home = () => {
   return (
     <>
       <div
-        id="carousels-section"
-        className="shadow-lg relative max-w-full max-h-[680px] rounded-3xl"
+        id="hero-section"
+        className="shadow-lg relative w-full h-[40rem] lg:rounded-3xl sm:rounded-2xl bg-cover bg-center bg-[url('/banner/carousel-2.jpg')]"
       >
-        <div className="absolute my-[25%] backdrop-blur-sm w-full h-20 bg-white/30 z-10 text-center text-white">
-          <p className="text-2xl my-5">Geoenvi Service Company</p>
+        <div className="flex items-center justify-center w-full  lg:rounded-3xl sm:rounded-2xl h-full bg-slate-900 bg-opacity-50">
+          <div className="text-center text-white">
+            <p className="text-2xl font-semibold uppercase lg:text-3xl">
+              TTOIL Service Company
+            </p>
+            <button className="w-full px-6 py-2 mt-4 text-sm font-medium text-white uppercase transition-colors duration-300 transform bg-sky-600 rounded-md lg:w-auto hover:bg-sky-500 focus:outline-none focus:bg-blue-500">
+              <span>Explore</span>
+            </button>
+          </div>
         </div>
-        <Image
-          src="/banner/carousel-2.jpg"
-          width={1280}
-          height={680}
-          layout="intrinsic"
-          alt="Carousel Image"
-          className="object-cover rounded-3xl brightness-75"
-        />
       </div>
 
       <div id="about-section" className="mx-10 my-20 flex">
@@ -117,7 +116,7 @@ const Home = () => {
                 />
               </div>
               <div className="w-[50%] text-md text-slate-400">
-                <div className="w-[500px] ml-14">
+                <div className="salahw-[500px] ml-14">
                   <p className="text-2xl font-semibold my-10">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -162,7 +161,7 @@ const Home = () => {
             </div>
             <div className="product-item ">
               <div className="w-[50%] text-md text-slate-400">
-                <div className="w-[500px]">
+                <div className="salahw-[500px]">
                   <p className="text-2xl font-semibold my-10">
                     Middle Distillates
                     <svg
@@ -227,7 +226,7 @@ const Home = () => {
                 />
               </div>
               <div className="w-[50%] text-md text-slate-400">
-                <div className="w-[500px] ml-14">
+                <div className="salahw-[500px] ml-14">
                   <p className="text-2xl font-semibold my-10">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -267,7 +266,7 @@ const Home = () => {
             </div>
             <div className="product-item ">
               <div className="w-[50%] text-md text-slate-400">
-                <div className="w-[500px]">
+                <div className="salahw-[500px]">
                   <p className="text-2xl font-semibold my-10">
                     Crude
                     <svg
@@ -325,7 +324,7 @@ const Home = () => {
                 />
               </div>
               <div className="w-[50%] text-md text-slate-400">
-                <div className="w-[500px] ml-14">
+                <div className="salahw-[500px] ml-14">
                   <p className="text-2xl font-semibold my-10">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -361,7 +360,7 @@ const Home = () => {
             </div>
             <div className="product-item ">
               <div className="w-[50%] text-md text-slate-400">
-                <div className="w-[500px]">
+                <div className="salahw-[500px]">
                   <p className="text-2xl font-semibold my-10">
                     Energy of the Future
                     <svg
@@ -429,7 +428,7 @@ const Home = () => {
                 />
               </div>
               <div className="w-[50%] text-md text-slate-400">
-                <div className="w-[500px] ml-14">
+                <div className="salahw-[500px] ml-14">
                   <p className="text-2xl font-semibold my-10">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -512,7 +511,7 @@ const Home = () => {
             </div>
             <div className="product-item ">
               <div className="w-[50%] text-md text-slate-400">
-                <div className="w-[500px]">
+                <div className="salahw-[500px]">
                   <p className="text-2xl font-semibold my-10">
                     Dry Bulk
                     <svg
