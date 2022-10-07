@@ -4,7 +4,13 @@
 
 @layer components {
   .product-item {
-    @apply flex my-10;
+    @apply flex flex-row my-10;
+  }
+  .list ul li {
+    @apply my-2;
+  }
+  .product-item-md {
+    @apply flex flex-col my-4;
   }
   .list ul li {
     @apply my-2;
