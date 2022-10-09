@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
         <title>Geoenvi</title>
         <meta name="description" content="Geo Environments Company" />
       </Head>
-      <div className="container px-4 md:mx-auto sm:mx-5 sm:container-sm">
+      <div className="px-4 mx-auto max-w-7xl">
         <Header />
         <main className="my-5">{children}</main>
         <Footer />
