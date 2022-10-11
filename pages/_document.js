@@ -7,7 +7,7 @@ const Documents = () => {
         <link rel="icon" href="/logo-3.ico" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       </Head>
-      <body>
+      <body className="bg-slate-50 dark:bg-slate-900">
         <Main />
         <NextScript />
       </body>
