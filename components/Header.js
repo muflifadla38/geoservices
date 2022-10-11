@@ -129,7 +129,7 @@ const Header = () => {
           </Link>
           <ul className="items-center hidden space-x-8 lg:flex">
             <li className="hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md">
-              <Link href="/#about-section">
+              <Link href="/about">
                 <a
                   aria-label="About"
                   title="About"
@@ -140,7 +140,7 @@ const Header = () => {
               </Link>
             </li>
             <li className="hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md">
-              <Link href="/#contact-section">
+              <Link href="/contact">
                 <a
                   aria-label="Contact"
                   title="Contact"
@@ -276,7 +276,7 @@ const Header = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link href="/#about-section">
+                          <Link href="/#about">
                             <a
                               aria-label="About"
                               title="About"
