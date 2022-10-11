@@ -1,5 +1,6 @@
 import { useState, useEffect, Fragment } from "react";
-import { Popover, Transition } from "@headlessui/react";
+import { Popover, Transition, Switch } from "@headlessui/react";
+import { useTheme } from "next-themes";
 import Link from "next/link";
 import Image from "next/image";
 import Dropdown from "./Dropdown";
@@ -15,6 +16,8 @@ import {
   GeotechnicIcon,
   ServiceIcon,
   ProjectIcon,
+  MoonIcon,
+  SunIcon,
 } from "./Icons";
 
 const ServicesItem = [
@@ -74,37 +77,44 @@ const ProjectsItem = [
 const Header = () => {
   const [scroll, setScroll] = useState(false);
   const scrollClass = scroll
-    ? "sticky top-0 z-40 bg-opacity-75 backdrop-filter backdrop-blur-sm lg:rounded-sm lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06]"
-    : "";
+    ? "bg-white sticky top-0 z-40 bg-opacity-75 backdrop-filter backdrop-blur-sm lg:rounded-sm lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] supports-backdrop-blur:bg-white/95 dark:bg-slate-900/75"
+    : "bg-inherit";
+
+  //Toggle Switch
+  const [enabled, setEnabled] = useState(false);
+
+  // Darkmode
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
+    // Add scroll class to header when scrolls
     window.addEventListener("scroll", () => {
       setScroll(window.scrollY > 20);
     });
-  }, [scroll]);
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+    // Dark mode switcher
+    enabled ? setTheme("dark") : setTheme("none");
+  }, [scroll, enabled]);
 
   return (
     <Popover
       as="header"
       className={
-        "relative bg-white my-6 lg:my-8 transition " +
-        (scroll ? scrollClass : "")
+        "relative my-6 lg:my-8 transition " + (scroll ? scrollClass : "")
       }
     >
       <div className="px-4 py-3 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 ">
         <div className="relative flex items-center justify-between lg:justify-center lg:space-x-16">
           <Popover.Group
             as="ul"
-            className="items-center hidden space-x-8 lg:flex"
+            className="items-center hidden space-x-8 lg:flex text-slate-700 dark:text-slate-200"
           >
             <li className="hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md">
               <Link href="/">
                 <a
                   aria-label="Home"
                   title="Home"
-                  className="font-medium tracking-wide text-slate-700"
+                  className="font-medium tracking-wide"
                 >
                   Home
                 </a>
@@ -127,13 +137,13 @@ const Header = () => {
               />
             </a>
           </Link>
-          <ul className="items-center hidden space-x-8 lg:flex">
+          <ul className="items-center hidden space-x-8 lg:flex text-slate-700 dark:text-slate-200">
             <li className="hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md">
               <Link href="/about">
                 <a
                   aria-label="About"
                   title="About"
-                  className="font-medium tracking-wide text-slate-700"
+                  className="font-medium tracking-wide "
                 >
                   About
                 </a>
@@ -144,7 +154,7 @@ const Header = () => {
                 <a
                   aria-label="Contact"
                   title="Contact"
-                  className="font-medium tracking-wide text-slate-700"
+                  className="font-medium tracking-wide"
                 >
                   Contact
                 </a>
@@ -155,13 +165,34 @@ const Header = () => {
                 <a
                   aria-label="Languages"
                   title="Languages"
-                  className="font-medium tracking-wide text-slate-700"
+                  className="font-medium tracking-wide"
                 >
                   Languages
                 </a>
               </Link>
             </li>
           </ul>
+          <div className="">
+            <Switch
+              checked={enabled}
+              onChange={setEnabled}
+              className={`${enabled ? "bg-teal-900" : "bg-teal-700"}
+          relative inline-flex h-8 w-[4.2rem] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`}
+            >
+              <span className="sr-only">Use setting</span>
+              <span
+                aria-hidden="true"
+                className={`${enabled ? "translate-x-9" : "translate-x-0"}
+            pointer-events-none inline-block h-7 w-7 transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out`}
+              >
+                {enabled ? (
+                  <MoonIcon className="w-6 h-6 text-slate-400 mx-auto" />
+                ) : (
+                  <SunIcon className="w-6 h-6 text-slate-400 mx-auto" />
+                )}
+              </span>
+            </Switch>
+          </div>
           <div className="lg:hidden z-10">
             <Popover.Button
               aria-label="Open Menu"

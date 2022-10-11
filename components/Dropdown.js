@@ -9,7 +9,7 @@ const Dropdown = ({ title, items }) => {
         <>
           <Popover.Button
             className={`${open ? "bg-slate-300" : "hover:bg-slate-200"}
-          px-2 py-1 rounded-md font-medium tracking-wide text-slate-700 inline-flex items-center`}
+          px-2 py-1 rounded-md font-medium tracking-wide inline-flex items-center`}
           >
             <span>{title}</span>
             <ChevronDownIcon
