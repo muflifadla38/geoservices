@@ -53,7 +53,7 @@ const Home = () => {
         id="about-2-section"
         className="lg:my-20 md:my-10 shadow-lg relative w-full lg:h-96 md:h-80 lg:rounded-3xl sm:rounded-2xl bg-cover bg-center bg-[url('/banner/carousel-3.jpg')]"
       >
-        <div className="flex items-center lg:justify-start md:justify-center w-full lg:rounded-3xl sm:rounded-2xl h-full bg-slate-900 bg-opacity-50 absolute z-50">
+        <div className="flex items-center lg:justify-start md:justify-center w-full lg:rounded-3xl sm:rounded-2xl h-full bg-slate-900 bg-opacity-50 absolute">
           <div className="lg:text-left md:text-center text-slate-100 p-2 md:m-4 lg:w-1/2 lg:ml-32 backdrop-blur-sm rounded-md ">
             <p className="md:mb-16 text-slate-400 font-semibold underline underline-offset-4">
               What Can We Do For You?
@@ -102,7 +102,7 @@ const Home = () => {
 
       <div
         id="products-section"
-        className="lg:my-20 md:my-10 lg:rounded-3xl md:rounded-xl bg-slate-50 shadow-lg"
+        className="lg:my-20 md:my-10 lg:rounded-3xl md:rounded-xl bg-slate-100 dark:bg-slate-800 shadow-lg"
       >
         <div className="lg:mx-10 md:py-1 md:px-5">
           <div className="lg:m-10 m-5">
@@ -477,70 +477,67 @@ const Home = () => {
         <div className="max-w-screen-xl px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto  text-slate-900 rounded-lg shadow-md">
           <div className="flex flex-col justify-between">
             <div>
-              <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
+              <h2 className="text-4xl lg:text-5xl font-bold leading-tight dark:text-slate-100">
                 Lets talk about everything!
               </h2>
-              <div className="text-slate-700 mt-8">
+              <div className="text-slate-700 dark:text-slate-400 mt-8">
                 Hate forms? Send us an <span className="underline">email</span>
                 instead.
               </div>
             </div>
             <div className="mt-8 text-center"></div>
           </div>
-          <div className="">
+          <div className="text-slate-600 dark:text-slate-400">
             <form>
-              <label className="text-sm text-slate-600 font-bold">
-                Full Name
-              </label>
+              <label className="text-sm font-bold">Full Name</label>
               <input
-                className="w-full bg-slate-100 border-transparent text-slate-900 mt-2 rounded-lg focus:outline-none focus:shadow-outline peer"
+                className="w-full bg-slate-200 dark:bg-slate-800 border-transparent text-slate-900 dark:text-slate-100 mt-2 rounded-lg focus:outline-none focus:shadow-outline peer"
                 type="text"
                 placeholder=""
               />
               <p className="my-2 hidden peer-invalid:block text-pink-600 text-sm">
                 Please enter your name
               </p>
+              <div className="mt-6">
+                <label className="text-sm font-bold">Email</label>
+                <input
+                  className="w-full bg-slate-200 dark:bg-slate-800 border-transparent text-slate-900 dark:text-slate-100 mt-2 rounded-lg focus:outline-none focus:shadow-outline peer"
+                  type="email"
+                />
+                <p className="my-2 hidden peer-invalid:block text-pink-600 text-sm">
+                  Please enter a valid email address
+                </p>
+              </div>
+              <div className="mt-6">
+                <label className="text-sm font-bold">Whatsapp</label>
+                <input
+                  type="tel"
+                  className="w-full bg-slate-200 dark:bg-slate-800 border-transparent text-slate-900 dark:text-slate-100 mt-2 rounded-lg focus:outline-none focus:shadow-outline peer"
+                  placeholder=""
+                />
+                <p className="my-2 hidden peer-invalid:block text-pink-600 text-sm">
+                  Please enter a valid whatsapp number
+                </p>
+              </div>
+              <div className="mt-6">
+                <label className="text-sm font-bold">Message</label>
+                <textarea
+                  title="Message"
+                  className="h-32 w-full bg-slate-200 dark:bg-slate-800 border-transparent text-slate-900 dark:text-slate-100 mt-2 rounded-lg focus:outline-none focus:shadow-outline peer"
+                />
+                <p className="my-2 hidden peer-invalid:block text-pink-600 text-sm">
+                  This field cannot empty
+                </p>
+              </div>
+              <div className="mt-6 text-right">
+                <button
+                  className="text-sm font-bold tracking-wide bg-indigo-500 py-2 px-4 text-slate-100 rounded-lg hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                  type="submit"
+                >
+                  Send
+                </button>
+              </div>
             </form>
-            <div className="mt-6">
-              <label className="text-sm text-slate-600 font-bold">Email</label>
-              <input
-                className="w-full bg-slate-100 border-transparent text-slate-900 mt-2 rounded-lg focus:outline-none focus:shadow-outline peer"
-                type="email"
-              />
-              <p className="my-2 hidden peer-invalid:block text-pink-600 text-sm">
-                Please enter a valid email address
-              </p>
-            </div>
-            <div className="mt-6">
-              <label className="text-sm text-slate-600 font-bold">
-                Whatsapp
-              </label>
-              <input
-                type="tel"
-                className="w-full bg-slate-100 border-transparent text-slate-900 mt-2 rounded-lg focus:outline-none focus:shadow-outline peer"
-                placeholder=""
-              />
-              <p className="my-2 hidden peer-invalid:block text-pink-600 text-sm">
-                Please enter a valid whatsapp number
-              </p>
-            </div>
-            <div className="mt-6">
-              <label className="text-sm text-slate-600 font-bold">
-                Message
-              </label>
-              <textarea className="w-full h-32 bg-slate-100 border-transparent text-slate-900 mt-2 rounded-lg focus:outline-none focus:shadow-outline peer" />
-              <p className="my-2 hidden peer-invalid:block text-pink-600 text-sm">
-                This field cannot empty
-              </p>
-            </div>
-            <div className="mt-6 text-right">
-              <button
-                className="text-sm font-bold tracking-wide bg-indigo-500 py-2 px-4 text-slate-100 rounded-lg hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                type="submit"
-              >
-                Send
-              </button>
-            </div>
           </div>
         </div>
       </div>
