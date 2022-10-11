@@ -4,7 +4,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="py-12">
-      <div className="grid grid-cols-2 gap-10 mb-3 md:grid-cols-3 lg:grid-cols-11 lg:gap-20">
+      <div className="grid grid-cols-2 gap-10 mb-3 md:grid-cols-3 lg:grid-cols-11 lg:gap-20 text-slate-800 dark:text-slate-300">
         <div className="col-span-3">
           <Link href="/" className="flex items-center">
             <a title="TTOILHello Home Page">
@@ -14,10 +14,10 @@ const Footer = () => {
                 width={68.1}
                 height={24}
               />
-              <span className="sr-only">Kutty Home Page</span>
+              <span className="sr-only">TTOIL Home Page</span>
             </a>
           </Link>
-          <p className="my-4 text-xs leading-normal text-gray-600">
+          <p className="my-4 text-xs leading-normal text-slate-600 dark:text-slate-200">
             Nda tau ini <strong>Apa mau diisikan</strong> disini. Sembarangmo
             saja dulu{" "}
             <a href="#" className="underline" target="_blank">
@@ -31,49 +31,49 @@ const Footer = () => {
             Services
           </p>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
+            className="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             Georadar/ GPR
           </a>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
+            className="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             Geolistrik
           </a>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
+            className="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             Microseis
           </a>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
+            className="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             Drone
           </a>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
+            className="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             GPS Geodetic
           </a>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
+            className="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             MASW
           </a>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
+            className="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             Soil Investigation
           </a>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
+            className="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             Radio Detection
@@ -84,25 +84,25 @@ const Footer = () => {
             Projects
           </p>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
+            className="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             Aplikasi Konstruksi
           </a>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
+            className="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             Aplikasi Geotek
           </a>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
+            className="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             Aplikasi Lingkungan
           </a>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
+            className="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             Survey Mapping
@@ -113,42 +113,42 @@ const Footer = () => {
             About
           </p>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
+            className="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             Who are We
           </a>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
+            className="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             Our Company
           </a>
         </nav>
-        <nav className="col-span-1 md:col-span-1 lg:col-span-2">
+        <nav className="col-span-1 md:col-span-1 lg:col-span-2 ">
           <p className="mb-3 text-xs font-semibold tracking-wider text-slate-400 uppercase">
             Contact
           </p>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
+            className="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             About Us
           </a>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
+            className="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             Privacy
           </a>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
+            className="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             Terms
           </a>
           <a
-            className="flex mb-3 text-sm font-medium text-gray-800 transition md:mb-2 hover:text-sky-600"
+            className="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-sky-600"
             href="#"
           >
             Status
@@ -156,7 +156,7 @@ const Footer = () => {
         </nav>
       </div>
       <div className="flex flex-col items-start justify-between pt-10 mt-10 border-t border-gray-100 md:flex-row md:items-center">
-        <p className="mb-2 text-xs text-left text-gray-600 md:mb-0">
+        <p className="mb-2 text-xs text-left text-slate-600 dark:text-slate-400 md:mb-0">
           &copy; Copyright {new Date().getFullYear()}{" "}
           <strong>
             <Link href="/">
