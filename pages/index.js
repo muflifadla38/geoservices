@@ -107,7 +107,7 @@ const Home = () => {
         <div className="lg:mx-10 md:py-1 md:px-5">
           <div className="lg:m-10 m-5">
             <p className="text-lg underline underline-offset-4 uppercase text-slate-600 font-semibold my-5">
-              Products
+              Services
             </p>
             <div className="lg:product-item product-item-md lg:text-left text-center">
               <div className="lg:w-1/2 lg:block hidden mt-10">
@@ -124,7 +124,7 @@ const Home = () => {
                 <div className="lg:ml-14 md:mt-5">
                   <p className="text-2xl font-semibold">
                     <LeftArrowIcon className="w-6 h-6 stroke-2  mr-2 lg:inline hidden" />
-                    Fuel Oil & Vacuum Gasoil
+                    Georadar / GPR + GPS RTK
                   </p>
                   <div className="lg:w-1/2 lg:hidden lg:my-10 md:my-6">
                     <Image
@@ -138,24 +138,22 @@ const Home = () => {
                   </div>
                   <div className="lg:my-3 lg:ml-8">
                     <p>
-                      TTOIL started out as a fuel oil and a VGO trader, and this
-                      is what we are really good at. Every month we move over 1
-                      million tons of heavy feedstocks. Half of this is used by
-                      refineries to supplement their incoming crude streams,
-                      andthe other half as blendstock for bunker fuel.
+                      Ground-penetrating radar (GPR) / Georadar adalah metode
+                      geofisika yang menggunakan gelombang radar untuk
+                      menggambarkan objek dibawah permukaan objek yang
+                      menutupinya.
                     </p>
                     <br />
                     <p>
-                      Our fuel oil trading geography is extensive. We source
-                      fuel oil and VGO from Russia, Kazakhstan, Turkmenistan,
-                      Algeria, West Africa and take it to major trading hubs
-                      including Rotterdam, Fujairah, Singapore, Turkey or
-                      directly to refineries. We serve marine bunker markets
-                      through long term partnerships with fleet owners and
-                      bunkering companies. We add value by carefully selecting
-                      incoming streams, using our extensive terminal network to
-                      store and blend them where required, maintaining the
-                      quality throughout.
+                      GPR / Georadar membantu bisnis anda dalam menimalkan
+                      resiko dari kerugian yang lebih besar akibat objek dibawah
+                      yang tidak anda ketahui.
+                    </p>
+                    <br />
+                    <p>
+                      GPR memiliki resolusi tinggi untuk mendeteksi objek bawah
+                      permukaan seperti: gangguan utilitas (pipa, kawat), lubang
+                      pembuangan, struktur jalan, dll
                     </p>
                   </div>
                 </div>
@@ -165,7 +163,7 @@ const Home = () => {
               <div className="lg:w-1/2 text-md text-slate-400">
                 <div className="lg:mr-14 md:mt-5">
                   <p className="text-2xl font-semibold">
-                    Middle Distillates
+                    Geolistrik/ ERT
                     <RightArrowIcon className="w-6 h-6 stroke-2  ml-2 lg:inline hidden" />
                   </p>
                   <div className="lg:w-1/2 lg:hidden lg:my-10 md:my-6">
@@ -180,23 +178,21 @@ const Home = () => {
                   </div>
                   <div className="lg:my-3 ">
                     <p>
-                      Middle distillates form the core of commercial road
-                      transport, industrial and marine fuels. TTOIL’s middle
-                      distillates portfolio serves industrial customers and
-                      retail operators in many countries, ranging from Europe to
-                      Americas and Asia Pacific.
+                      Geolistrik adalah Metode resistivitas (tahanan jenis)
+                      merupakan salah satu metode geofisika yang digunakan untuk
+                      mendapatkan gambaran struktur bawah tanah dengan parameter
+                      observasi sifat kelistrikan bumi.
                     </p>
                     <br />
                     <p>
-                      We cover the whole range of generic and special fuels –
-                      road diesel, jet fuel, low and high sulphur gasoil for
-                      marine and industrial applications.
+                      Masalah seperti kekeringan dan adanya lubang “sinkhole”
+                      dapat dimitigasi dengan metode ini.
                     </p>
                     <br />
                     <p>
-                      TTOIL serve industrial customers and distributors delivery
-                      middle distillate fuels and components with perfect
-                      timing, execution, and customer service.
+                      Berguna untuk berbagai penyelidikan seperti: air tanah,
+                      sumber daya mineral, bebatuan, void, tanah, kedalaman
+                      batuan dasar, dll
                     </p>
                   </div>
                 </div>
@@ -227,7 +223,7 @@ const Home = () => {
                 <div className="lg:ml-14 md:mt-5">
                   <p className="text-2xl font-semibold">
                     <LeftArrowIcon className="w-6 h-6 stroke-2  mr-2 lg:inline hidden" />
-                    Naptha
+                    Drone
                   </p>
                   <div className="lg:w-1/2 lg:hidden lg:my-10 md:my-6">
                     <Image
@@ -241,19 +237,16 @@ const Home = () => {
                   </div>
                   <div className="lg:my-3 lg:ml-8">
                     <p>
-                      We are a major naphtha supplier to refineries,
-                      petrochemical producers and other industrial users all
-                      over the globe. Our naphtha turnover has been showing
-                      consistent growth, reaching millions of tons annually.
+                      Drone adalah pesawat tanpa pilot. Penerbangan dikendalikan
+                      dari jarak jauh oleh komputer di pesawat terbang atau oleh
+                      pilot kendali jarak jauh di darat
                     </p>
                     <br />
                     <p>
-                      The product is sourced in the Former Soviet Union and from
-                      major Med producers and is taken to customers worldwide –
-                      from Europe to Asia Pacific. Our strategic partnerships
-                      with naphtha users in Turkey make us one of the largest
-                      suppliers of this feedstock to Turkish refineries and
-                      petrochemical companies.
+                      Teknologi drone ini dapat digunakan berbagai bidang,
+                      seperti Perkebunan, konstruksi, pertambangan dll. Drone
+                      bisa juga dikombinasikan dengan berbagai sensor contohnya:
+                      sensor lidar, sensor metana, sensor suhu, dll.
                     </p>
                   </div>
                 </div>
@@ -263,7 +256,7 @@ const Home = () => {
               <div className="lg:w-1/2 text-md text-slate-400">
                 <div className="lg:mr-14 md:mt-5">
                   <p className="text-2xl font-semibold">
-                    Crude
+                    GPS Geodetic
                     <RightArrowIcon className="w-6 h-6 stroke-2  ml-2 lg:inline hidden" />
                   </p>
                   <div className="lg:w-1/2 lg:hidden lg:my-10 md:my-6">
@@ -278,17 +271,16 @@ const Home = () => {
                   </div>
                   <div className="lg:my-3 ">
                     <p>
-                      TTOIL is a firmly established crude trader, with offtake
-                      agreements and regular purchases from major producers in
-                      Russia, Kazakhstan, the Middle East, North Sea, US Gulf
-                      Coast and Latin America supplying refineries in Europe,
-                      the Med and Asia Pacific.
+                      Alat ukur koordinat GPS geodetik menggunakan sistem
+                      satelit GNSS (Global Navigation Satellite System) dengan
+                      akurasi yang sangat tinggi dan presisi
                     </p>
                     <br />
                     <p>
-                      We are very serious about our crude book, and we are
-                      constantly working to source new grades and to serve more
-                      refiners with the grades and blends they require.
+                      Dengan Sistem GNSS, memungkinkan surveyor untuk terus
+                      mengumpulkan data dengan akurasi yang tidak diragukan
+                      serta mengurangi waktu pekerjaan lebih cepat dan lebih
+                      aman daripada GPS Konvensional.
                     </p>
                   </div>
                 </div>
@@ -319,7 +311,7 @@ const Home = () => {
                 <div className="lg:ml-14 md:mt-5">
                   <p className="text-2xl font-semibold">
                     <LeftArrowIcon className="w-6 h-6 stroke-2  mr-2 lg:inline hidden" />
-                    Gasoline
+                    Radiodetection
                   </p>
                   <div className="lg:w-1/2 lg:hidden lg:my-10 md:my-6">
                     <Image
@@ -333,15 +325,15 @@ const Home = () => {
                   </div>
                   <div className="lg:my-3 lg:ml-8">
                     <p>
-                      Our gasoline book has been consistently growing over the
-                      years. We supply customers in Europe and Central Asia with
-                      grades appropriate for their jurisdictions.
+                      Radiodetection adalah perusahaan yang mengembangkan
+                      peralatan-peralatan yang diperlukan perusahaan gas,
+                      listrik, air, dan lainnya untuk mendeteksi utilitas bawah
+                      tanah seperti kabel dan pipa.
                     </p>
                     <br />
                     <p>
-                      TTOIL’s motor gasoline book is underpinned by our
-                      extensive naphtha and component trading operation,
-                      strategically positioned storage and strong logistics.
+                      Menemukan dan menghindari kerusakan pada jaringan
+                      infrastruktur di bawah permukaan secara akurat
                     </p>
                   </div>
                 </div>
@@ -351,7 +343,7 @@ const Home = () => {
               <div className="lg:w-1/2 text-md text-slate-400">
                 <div className="lg:mr-14 md:mt-5">
                   <p className="text-2xl font-semibold">
-                    Gasoline
+                    Concrete Scanning & Assessment
                     <RightArrowIcon className="w-6 h-6 stroke-2  ml-2 lg:inline hidden" />
                   </p>
                   <div className="lg:w-1/2 lg:hidden lg:my-10 md:my-6">
@@ -366,15 +358,9 @@ const Home = () => {
                   </div>
                   <div className="lg:my-3 ">
                     <p>
-                      Our gasoline book has been consistently growing over the
-                      years. We supply customers in Europe and Central Asia with
-                      grades appropriate for their jurisdictions.
-                    </p>
-                    <br />
-                    <p>
-                      TTOIL’s motor gasoline book is underpinned by our
-                      extensive naphtha and component trading operation,
-                      strategically positioned storage and strong logistics.
+                      Asesmen elemen struktur dalam beton seperti rebar,
+                      mengukur ketebalan pelat, mendeteksi rongga, dan menemukan
+                      kabel/pipa.
                     </p>
                   </div>
                 </div>
@@ -405,7 +391,7 @@ const Home = () => {
                 <div className="lg:ml-14 md:mt-5">
                   <p className="text-2xl font-semibold">
                     <LeftArrowIcon className="w-6 h-6 stroke-2  mr-2 lg:inline hidden" />
-                    Petrochemical Products
+                    Microseismic / HVSR
                   </p>
                   <div className="lg:w-1/2 lg:hidden lg:my-10 md:my-6">
                     <Image
@@ -419,38 +405,18 @@ const Home = () => {
                   </div>
                   <div className="lg:my-3 lg:ml-8">
                     <p>
-                      Petrochemicals are sophisticated products, and Coral
-                      Energy delivering them to customers. Our dynamic
-                      petrochemicals team runs positions in
+                      Mikroseismik dapat digunakan untuk penyelidikan kerentanan
+                      Tanah, deteksi ketebalan batuan lunak, dan penentuan zona
+                      rekahan tinggi
                     </p>
                     <br />
-                    <div className="list lg:block md:text-left flex md:gap-x-5 md:justify-center">
-                      <ul className="flex list-disc ml-4">
-                        <div className="">
-                          <li>Acetates</li>
-                          <li>Caustic Soda</li>
-                          <li>Ethylene</li>
-                          <li>PA</li>
-                          <li>Polyethylene</li>
-                          <li>VAM</li>
-                        </div>
-                        <div className="mx-14">
-                          <li>Acrylics</li>
-                          <li>DEG</li>
-                          <li>EDC</li>
-                          <li>PVC</li>
-                          <li>Polypropylene</li>
-                          <li>VCM</li>
-                        </div>
-                        <div className="">
-                          <li>Benzene</li>
-                          <li>2EH</li>
-                          <li>IPA</li>
-                          <li>PTA</li>
-                          <li>Styrene Monomer</li>
-                        </div>
-                      </ul>
-                    </div>
+                    <p>
+                      Dengan mengetahui persebaran lapisan lunak tersebut dapat
+                      membantu anda dalam menghindari terjadinya masalah sebagai
+                      berikut ; kerusakan pada konstruksi bangunan, kelongsoran
+                      pada jalan, keruntuhan jembatan, penurunan elevasi jalan
+                      (differential settlement), dll
+                    </p>
                   </div>
                 </div>
               </div>
@@ -459,7 +425,7 @@ const Home = () => {
               <div className="lg:w-1/2 text-md text-slate-400">
                 <div className="lg:mr-14 md:mt-5">
                   <p className="text-2xl font-semibold">
-                    Dry Bulk
+                    Multichannel Analysis Surface Wave (MASW)
                     <RightArrowIcon className="w-6 h-6 stroke-2  ml-2 lg:inline hidden" />
                   </p>
                   <div className="lg:w-1/2 lg:hidden lg:my-10 md:my-6">
@@ -474,8 +440,19 @@ const Home = () => {
                   </div>
                   <div className="lg:my-3 ">
                     <p>
-                      AZOIL’s comprehensive and innovative approach to commodity
-                      markets is not limited to liquid hydrocarbons.
+                      Survey multi-channel analysis of surface waves (MASW)
+                      adalah salah satu metode survey dari soil investigation
+                      yang berfungsi untuk mengetahui tingkat kekerasan tanah
+                      berdasarkan kecepatan gelombang geser (Vs) yang bisa
+                      diukur dari permukaan.
+                    </p>
+                    <br />
+                    <p>
+                      Jasa survey MASW dan scan beton akan membuat pekerjaan
+                      konstruksi menjadi lebih mudah dan efisien dengan
+                      memetakan lapisan lunak secara regional sehingga bisa
+                      menjadi langkah mitigasi akan terjadi masalah yang timbul
+                      akibat tanah lunak.
                     </p>
                   </div>
                 </div>
