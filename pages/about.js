@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const About = () => {
@@ -10,26 +11,32 @@ const About = () => {
               <div className="flex items-center -mx-3 sm:-mx-4">
                 <div className="w-full xl:w-1/2 px-3 sm:px-4">
                   <div className="py-3 sm:py-4">
-                    <img
-                      src="https://cdn.tailgrids.com/1.0/assets/images/services/image-1.jpg"
+                    <Image
+                      src="/banner/about-1.jpg"
+                      width={288}
+                      height={341}
                       alt="image"
-                      className="rounded-2xl w-full"
+                      className="rounded-lg"
                     />
                   </div>
                   <div className="py-3 sm:py-4">
-                    <img
-                      src="https://cdn.tailgrids.com/1.0/assets/images/services/image-2.jpg"
-                      alt=""
-                      className="rounded-2xl w-full"
+                    <Image
+                      src="/banner/about-2.jpg"
+                      width={288}
+                      height={341}
+                      alt="image"
+                      className="rounded-lg"
                     />
                   </div>
                 </div>
                 <div className="w-full xl:w-1/2 px-3 sm:px-4">
                   <div className="my-4 relative z-10">
-                    <img
-                      src="https://cdn.tailgrids.com/1.0/assets/images/services/image-3.jpg"
-                      alt=""
-                      className="rounded-2xl w-full"
+                    <Image
+                      src="/banner/about-3.jpg"
+                      width={288}
+                      height={427}
+                      alt="image"
+                      className="rounded-lg"
                     />
                     <span className="absolute -right-7 -bottom-7 z-[-1]">
                       <svg
@@ -606,24 +613,26 @@ const About = () => {
               </div>
             </div>
             <div className="w-full lg:w-1/2 xl:w-5/12 px-4">
-              <div className="mt-10 lg:mt-0">
-                <span className="font-semibold text-lg text-primary mb-2 block">
-                  Why Choose Us
-                </span>
-                <h2 className="font-bold text-3xl sm:text-4xl text-dark mb-8">
-                  Make your customers happy by giving services.
-                </h2>
-                <p className="text-base text-body-color mb-8">
+              <div className="mt-10 lg:mt-0 dark:text-slate-400">
+                <div className="dark:text-slate-200">
+                  <span className="font-semibold text-lg mb-2 block">
+                    Why Choose Us
+                  </span>
+                  <h2 className="font-bold text-3xl sm:text-4xl text-dark mb-8">
+                    Make your customers happy by giving services.
+                  </h2>
+                </div>
+                <p className="text-base mb-8">
                   It is a long established fact that a reader will be distracted
                   by the readable content of a page when looking at its layout.
                   The point of using Lorem Ipsum is that it has a more-or-less.
                 </p>
-                <p className="text-base text-body-color mb-12">
+                <p className="text-base mb-12">
                   A domain name is one of the first steps to establishing your
                   brand. Secure a consistent brand image with a domain name that
                   matches your business.
                 </p>
-                <a
+                {/* <a
                   href="javascript:void(0)"
                   className="
                   py-4
@@ -633,7 +642,7 @@ const About = () => {
                   inline-flex
                   items-center
                   justify-center
-                  text-center text-white text-base
+                  text-center text-indigo-500 dark:text-indigo-400 text-base
                   bg-primary
                   hover:bg-opacity-90
                   font-normal
@@ -641,21 +650,23 @@ const About = () => {
                   "
                 >
                   Get Started
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section className="pt-20 lg:pt-[120px] pb-12 lg:pb-[90px] overflow-hidden bg-slate-100 rounded-lg text-center">
+      <section className="pt-20 lg:pt-[120px] pb-12 lg:pb-[90px] overflow-hidden bg-slate-200 dark:bg-slate-800 rounded-lg text-center">
         <div className="max-w-xl mx-auto">
-          <p className="text-3xl font-bold">Do you need help?</p>
+          <p className="text-3xl font-bold dark:text-slate-200">
+            Do you need help?
+          </p>
           <p className="my-8 text-slate-400">
             Ut enim ad minima veniam, quis nostrum exercitationem ullam
             corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.
           </p>
           <Link href="/contact">
-            <button className="bg-indigo-600 hover:bg-indigo-500 px-14 py-4 rounded-md">
+            <button className="bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-500 px-14 py-4 rounded-md">
               <span className="text-white">Contact Us</span>
             </button>
           </Link>
