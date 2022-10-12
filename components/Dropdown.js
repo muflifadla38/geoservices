@@ -8,7 +8,11 @@ const Dropdown = ({ title, items }) => {
       {({ open }) => (
         <>
           <Popover.Button
-            className={`${open ? "bg-slate-300" : "hover:bg-slate-200"}
+            className={`${
+              open
+                ? "bg-slate-300 dark:bg-slate-800"
+                : "hover:bg-slate-200 dark:hover:bg-slate-700"
+            }
           px-2 py-1 rounded-md font-medium tracking-wide inline-flex items-center`}
           >
             <span>{title}</span>
@@ -27,19 +31,19 @@ const Dropdown = ({ title, items }) => {
           >
             <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-md -translate-x-1/2 transform px-2 sm:px-0">
               <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                <div className="relative grid gap-6 bg-slate-50 dark:bg-slate-800 px-5 py-6 sm:gap-8 sm:p-8">
                   {items.map((item) => (
                     <a
                       key={item.title}
                       href={item.href}
-                      className="-m-3 flex items-start rounded-lg p-3 hover:bg-slate-50"
+                      className="-m-3 flex items-start rounded-lg p-3 hover:bg-slate-200 dark:hover:bg-slate-700"
                     >
                       <item.icon
-                        className="h-6 w-6 flex-shrink-0 text-sky-500"
+                        className="h-6 w-6 flex-shrink-0 text-indigo-500 dark:text-indigo-400"
                         aria-hidden="true"
                       />
                       <div className="ml-4">
-                        <p className="text-base font-medium text-slate-900">
+                        <p className="text-base font-medium text-slate-900 dark:text-slate-400">
                           {item.title}
                         </p>
                         <p className="mt-1 text-sm text-gray-500">

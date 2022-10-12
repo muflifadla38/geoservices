@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { LeftArrowIcon, RightArrowIcon } from "../components/Icons";
 
 const Home = () => {
@@ -8,14 +9,16 @@ const Home = () => {
         id="hero-section"
         className="shadow-lg relative w-full lg:h-[40rem] md:h-[37rem] lg:rounded-3xl sm:rounded-2xl bg-cover bg-center bg-[url('/banner/carousel-2.jpg')]"
       >
-        <div className="flex items-center justify-center w-full  lg:rounded-3xl sm:rounded-2xl h-full bg-slate-900 bg-opacity-50">
+        <div className="flex items-center justify-center w-full  lg:rounded-3xl sm:rounded-2xl h-full bg-slate-900 bg-opacity-50 ">
           <div className="text-center text-slate-100">
             <p className="text-2xl font-semibold uppercase lg:text-3xl">
               TTOIL Service Company
             </p>
-            <button className="px-6 py-2 mt-4 text-sm font-medium text-white uppercase transition-colors duration-300 transform bg-sky-600 rounded-md w-auto hover:bg-sky-700 focus:outline-none focus:bg-blue-600">
-              <span>Explore</span>
-            </button>
+            <Link href="/#about-section">
+              <button className="px-14 py-3 mt-4 text-sm font-medium  uppercase transition-colors duration-300 transform bg-indigo-500 dark:bg-indigo-700 rounded-md w-auto hover:bg-indigo-600 dark:hover:bg-indigo-600 focus:outline-none focus:bg-blue-600">
+                <span>Explore</span>
+              </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -531,7 +534,7 @@ const Home = () => {
               </div>
               <div className="mt-6 text-right">
                 <button
-                  className="text-sm font-bold tracking-wide bg-indigo-500 py-2 px-4 text-slate-100 rounded-lg hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                  className="text-sm font-bold tracking-wide bg-indigo-500 dark:bg-indigo-800 py-2 px-4 text-slate-100 rounded-lg hover:bg-indigo-600 dark:hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                   type="submit"
                 >
                   Send

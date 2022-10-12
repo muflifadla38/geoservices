@@ -25,11 +25,12 @@ const ScrollToTop = () => {
       <div className="flex items-end justify-end fixed bottom-0 right-0 mb-4 mr-4 z-10">
         {showTopBtn && (
           <div>
+            <div className="block w-9 h-9 rounded-full bg-slate-400 dark:bg-slate-600 relative top-9 blur-md"></div>
             <button
-              className="block w-9 h-9 rounded-full transition-all shadow hover:shadow-lg transform hover:scale-110"
+              className="block bg-slate-200 dark:bg-slate-700 w-9 h-9 rounded-full transition-all shadow hover:shadow-lg transform hover:scale-110"
               onClick={goToTop}
             >
-              <UpArrowIcon className="object-cover object-center w-full h-full rounded-full text-indigo-500" />
+              <UpArrowIcon className="w-full h-full rounded-full text-indigo-500 dark:text-indigo-500" />
             </button>
           </div>
         )}

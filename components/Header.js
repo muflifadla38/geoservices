@@ -1,11 +1,11 @@
 import { useState, useEffect, Fragment } from "react";
-import { Popover, Transition, Switch } from "@headlessui/react";
-import { useTheme } from "next-themes";
+import { Popover, Transition } from "@headlessui/react";
 import Link from "next/link";
 import Image from "next/image";
 import Dropdown from "./Dropdown";
+import DarkModeButton from "./DarkModeButton";
 import {
-  ChevronDownIcon,
+  LogoIcon,
   BurgerMenuIcon,
   XMarkIcon,
   WaveIcon,
@@ -16,8 +16,6 @@ import {
   GeotechnicIcon,
   ServiceIcon,
   ProjectIcon,
-  MoonIcon,
-  SunIcon,
 } from "./Icons";
 
 const ServicesItem = [
@@ -80,21 +78,12 @@ const Header = () => {
     ? "bg-white sticky top-0 z-40 bg-opacity-75 backdrop-filter backdrop-blur-sm lg:rounded-sm lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] supports-backdrop-blur:bg-white/95 dark:bg-slate-900/75"
     : "bg-inherit";
 
-  //Toggle Switch
-  const [enabled, setEnabled] = useState(false);
-
-  // Darkmode
-  const { theme, setTheme } = useTheme();
-
   useEffect(() => {
     // Add scroll class to header when scrolls
     window.addEventListener("scroll", () => {
       setScroll(window.scrollY > 20);
     });
-
-    // Dark mode switcher
-    enabled ? setTheme("dark") : setTheme("none");
-  }, [scroll, enabled]);
+  }, [scroll]);
 
   return (
     <Popover
@@ -109,7 +98,7 @@ const Header = () => {
             as="ul"
             className="items-center hidden space-x-8 lg:flex text-slate-700 dark:text-slate-200"
           >
-            <li className="hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md">
+            <li className="hover:bg-slate-200 dark:hover:bg-slate-700 active:bg-slate-300 px-2 py-1 rounded-md">
               <Link href="/">
                 <a
                   aria-label="Home"
@@ -127,18 +116,13 @@ const Header = () => {
             <a
               aria-label="TTOIL"
               title="TTOIL"
-              className="inline-flex items-center"
+              className="inline-flex items-center text-slate-700 dark:text-slate-200"
             >
-              <Image
-                src="/logo-3.png"
-                alt="Company Logo"
-                width={68}
-                height={24}
-              />
+              <LogoIcon className="w-20 h-8" />
             </a>
           </Link>
           <ul className="items-center hidden space-x-8 lg:flex text-slate-700 dark:text-slate-200">
-            <li className="hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md">
+            <li className="hover:bg-slate-200 dark:hover:bg-slate-700 active:bg-slate-300 px-2 py-1 rounded-md">
               <Link href="/about">
                 <a
                   aria-label="About"
@@ -149,7 +133,7 @@ const Header = () => {
                 </a>
               </Link>
             </li>
-            <li className="hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md">
+            <li className="hover:bg-slate-200 dark:hover:bg-slate-700 active:bg-slate-300 px-2 py-1 rounded-md">
               <Link href="/contact">
                 <a
                   aria-label="Contact"
@@ -160,7 +144,7 @@ const Header = () => {
                 </a>
               </Link>
             </li>
-            <li className="hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md">
+            <li className="hover:bg-slate-200 dark:hover:bg-slate-700 active:bg-slate-300 px-2 py-1 rounded-md">
               <Link href="/#languages">
                 <a
                   aria-label="Languages"
@@ -173,26 +157,10 @@ const Header = () => {
             </li>
           </ul>
           <div className="">
-            <Switch
-              checked={enabled}
-              onChange={setEnabled}
-              className={`${enabled ? "bg-teal-900" : "bg-teal-700"}
-          relative inline-flex h-8 w-[4.2rem] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`}
-            >
-              <span className="sr-only">Use setting</span>
-              <span
-                aria-hidden="true"
-                className={`${enabled ? "translate-x-9" : "translate-x-0"}
-            pointer-events-none inline-block h-7 w-7 transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out`}
-              >
-                {enabled ? (
-                  <MoonIcon className="w-6 h-6 text-slate-400 mx-auto" />
-                ) : (
-                  <SunIcon className="w-6 h-6 text-slate-400 mx-auto" />
-                )}
-              </span>
-            </Switch>
+            <DarkModeButton />
           </div>
+
+          {/* Mobile Menu */}
           <div className="lg:hidden z-10">
             <Popover.Button
               aria-label="Open Menu"
