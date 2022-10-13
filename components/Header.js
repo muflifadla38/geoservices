@@ -122,6 +122,17 @@ const Header = () => {
           </Link>
           <ul className="items-center hidden space-x-8 lg:flex text-slate-700 dark:text-slate-200">
             <li className="hover:bg-slate-200 dark:hover:bg-slate-700 active:bg-slate-300 px-2 py-1 rounded-md">
+              <Link href="/#blogs">
+                <a
+                  aria-label="Blogs"
+                  title="Blogs"
+                  className="font-medium tracking-wide"
+                >
+                  Blogs
+                </a>
+              </Link>
+            </li>
+            <li className="hover:bg-slate-200 dark:hover:bg-slate-700 active:bg-slate-300 px-2 py-1 rounded-md">
               <Link href="/about">
                 <a
                   aria-label="About"
@@ -140,17 +151,6 @@ const Header = () => {
                   className="font-medium tracking-wide"
                 >
                   Contact
-                </a>
-              </Link>
-            </li>
-            <li className="hover:bg-slate-200 dark:hover:bg-slate-700 active:bg-slate-300 px-2 py-1 rounded-md">
-              <Link href="/#languages">
-                <a
-                  aria-label="Languages"
-                  title="Languages"
-                  className="font-medium tracking-wide"
-                >
-                  Languages
                 </a>
               </Link>
             </li>
@@ -283,6 +283,17 @@ const Header = () => {
                             </Link>
                           </li>
                           <li>
+                            <Link href="/#blogs">
+                              <a
+                                aria-label="Blogs"
+                                title="Blogs"
+                                className="font-medium tracking-wide inline-flex items-center hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md"
+                              >
+                                Blogs
+                              </a>
+                            </Link>
+                          </li>
+                          <li>
                             <Link href="/#about">
                               <a
                                 aria-label="About"
@@ -301,17 +312,6 @@ const Header = () => {
                                 className="font-medium tracking-wide inline-flex items-center hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md"
                               >
                                 Contact
-                              </a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/#projects-section">
-                              <a
-                                aria-label="Our product"
-                                title="Our product"
-                                className="font-medium tracking-wide inline-flex items-center hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md"
-                              >
-                                Languages
                               </a>
                             </Link>
                           </li>
