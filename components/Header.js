@@ -1,7 +1,6 @@
 import { useState, useEffect, Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import Link from "next/link";
-import Image from "next/image";
 import Dropdown from "./Dropdown";
 import DarkModeButton from "./DarkModeButton";
 import {
@@ -156,163 +155,173 @@ const Header = () => {
               </Link>
             </li>
           </ul>
-          <div className="">
-            <DarkModeButton />
-          </div>
+          <div className="flex flex-row space-x-6">
+            <div className="inline-flex text-md items-center">
+              <p>
+                <a href="#id" className="">
+                  ID
+                </a>{" "}
+                |{" "}
+                <a
+                  href="#en"
+                  className="text-slate-600 dark:text-slate-400 font-bold"
+                >
+                  EN
+                </a>
+              </p>
+            </div>
 
-          {/* Mobile Menu */}
-          <div className="lg:hidden z-10">
-            <Popover.Button
-              aria-label="Open Menu"
-              title="Open Menu"
-              className="inline-flex items-center justify-center rounded-md p-2 -mr-1 transition duration-200 focus:outline-none focus:shadow-outline"
-            >
-              <span className="sr-only">Open Menu</span>
-              <BurgerMenuIcon
-                className="w-6 h-6 text-slate-600"
-                aria-hidden="true"
-              />
-            </Popover.Button>
-            <Transition
-              as={Fragment}
-              enter="duration-200 ease-out"
-              enterFrom="opacity-0 scale-95"
-              enterTo="opacity-100 scale-100"
-              leave="duration-100 ease-in"
-              leaveFrom="opacity-100 scale-100"
-              leaveTo="opacity-0 scale-95"
-            >
-              <Popover.Panel
-                focus
-                className="absolute top-0 left-0 w-full rounded-lg shadow-lg"
+            <DarkModeButton />
+
+            {/* Mobile Menu */}
+            <div className="lg:hidden z-50">
+              <Popover.Button
+                aria-label="Open Menu"
+                title="Open Menu"
+                className="inline-flex items-center justify-center rounded-md p-2 -mr-1 transition duration-200 focus:outline-none focus:shadow-outline"
               >
-                <div className="p-5 bg-white border rounded-lg ">
-                  <div className="flex items-center justify-between mb-4">
-                    <div>
-                      <Link href="/">
-                        <a
-                          aria-label="TTOIL"
-                          title="TTOIL"
-                          className="inline-flex items-center"
+                <span className="sr-only">Open Menu</span>
+                <BurgerMenuIcon
+                  className="w-6 h-6 text-slate-600 dark:text-slate-400"
+                  aria-hidden="true"
+                />
+              </Popover.Button>
+              <Transition
+                as={Fragment}
+                enter="duration-200 ease-out"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="duration-100 ease-in"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
+                <Popover.Panel
+                  focus
+                  className="absolute top-0 left-0 w-full rounded-lg shadow-lg"
+                >
+                  <div className="p-5 bg-slate-100 dark:bg-slate-800  rounded-lg ">
+                    <div className="flex items-center justify-between mb-4">
+                      <div>
+                        <Link href="/">
+                          <a
+                            aria-label="TTOIL"
+                            title="TTOIL"
+                            className="inline-flex items-center text-slate-700 dark:text-slate-200"
+                          >
+                            <LogoIcon className="w-16 h-8" />
+                          </a>
+                        </Link>
+                      </div>
+                      <div>
+                        <Popover.Button
+                          aria-label="Close Menu"
+                          title="Close Menu"
+                          className="inline-flex items-center justify-center rounded-md p-2 -mt-2 -mr-2 transition duration-200 hover:bg-gray-200 dark:hover:bg-slate-700 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                         >
-                          <Image
-                            src="/logo-3.png"
-                            alt="Company Logo"
-                            width={68}
-                            height={24}
+                          <span className="sr-only">Close menu</span>
+                          <XMarkIcon
+                            className="w-6 h-6 text-slate-600 dark:text-slate-400"
+                            aria-hidden="true"
                           />
-                        </a>
-                      </Link>
+                        </Popover.Button>
+                      </div>
                     </div>
-                    <div>
-                      <Popover.Button
-                        aria-label="Close Menu"
-                        title="Close Menu"
-                        className="inline-flex items-center justify-center rounded-md p-2 -mt-2 -mr-2 transition duration-200 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                      >
-                        <span className="sr-only">Close menu</span>
-                        <XMarkIcon
-                          className="w-6 h-6 text-slate-600"
-                          aria-hidden="true"
-                        />
-                      </Popover.Button>
-                    </div>
-                  </div>
-                  <nav className="divide-y-2 divide-gray-50">
-                    <ul className="pb-3">
-                      {ServicesItem.map((item) => (
-                        <li key={item.title}>
-                          <Link href={item.href}>
-                            <a
-                              aria-label="Services"
-                              title="Services"
-                              className="font-medium tracking-wide text-slate-700 inline-flex items-center hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md"
-                            >
-                              <item.icon
-                                className="w-4 h-4 flex-shrink-0 text-sky-500"
-                                aria-hidden="true"
-                              />
-                              <span className="ml-3 text-base font-medium">
-                                {item.title}
-                              </span>
-                            </a>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                    <ul className="py-3">
-                      {ProjectsItem.map((item) => (
-                        <li key={item.title}>
-                          <Link href={item.href}>
-                            <a
-                              aria-label="Services"
-                              title="Services"
-                              className="font-medium tracking-wide text-slate-700 inline-flex items-center hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md"
-                            >
-                              <item.icon
-                                className="w-4 h-4 flex-shrink-0 text-sky-500"
-                                aria-hidden="true"
-                              />
-                              <span className="ml-3 text-base font-medium">
-                                {item.title}
-                              </span>
-                            </a>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                    <div className="space-y-6 py-3">
-                      <ul className="grid grid-cols-2 gap-y-1 gap-x-8">
-                        <li>
-                          <Link href="/">
-                            <a
-                              aria-label="Home"
-                              title="Home"
-                              className="font-medium tracking-wide text-slate-700 inline-flex items-center hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md"
-                            >
-                              Home
-                            </a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/#about">
-                            <a
-                              aria-label="About"
-                              title="About"
-                              className="font-medium tracking-wide text-slate-700 inline-flex items-center hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md"
-                            >
-                              About
-                            </a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/#projects-section">
-                            <a
-                              aria-label="Contact"
-                              title="Contact"
-                              className="font-medium tracking-wide text-slate-700 inline-flex items-center hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md"
-                            >
-                              Contact
-                            </a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/#projects-section">
-                            <a
-                              aria-label="Our product"
-                              title="Our product"
-                              className="font-medium tracking-wide text-slate-700 inline-flex items-center hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md"
-                            >
-                              Languages
-                            </a>
-                          </Link>
-                        </li>
+                    <nav className="divide-y-2 divide-slate-200 dark:divide-slate-700">
+                      <ul className="pb-3">
+                        {ServicesItem.map((item) => (
+                          <li key={item.title}>
+                            <Link href={item.href}>
+                              <a
+                                aria-label="Services"
+                                title="Services"
+                                className="font-medium tracking-wide text-slate-900 dark:text-slate-400 inline-flex items-center hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md"
+                              >
+                                <item.icon
+                                  className="w-4 h-4 flex-shrink-0 text-sky-500"
+                                  aria-hidden="true"
+                                />
+                                <span className="ml-3 text-base font-medium">
+                                  {item.title}
+                                </span>
+                              </a>
+                            </Link>
+                          </li>
+                        ))}
                       </ul>
-                    </div>
-                  </nav>
-                </div>
-              </Popover.Panel>
-            </Transition>
+                      <ul className="py-3">
+                        {ProjectsItem.map((item) => (
+                          <li key={item.title}>
+                            <Link href={item.href}>
+                              <a
+                                aria-label="Services"
+                                title="Services"
+                                className="font-medium tracking-wide text-slate-900 dark:text-slate-400 inline-flex items-center hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md"
+                              >
+                                <item.icon
+                                  className="w-4 h-4 flex-shrink-0 text-indigo-500 dark:text-indigo-400"
+                                  aria-hidden="true"
+                                />
+                                <span className="ml-3 text-base font-medium">
+                                  {item.title}
+                                </span>
+                              </a>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                      <div className="space-y-6 py-3">
+                        <ul className="grid grid-cols-2 gap-y-1 gap-x-8 text-slate-900 dark:text-slate-400">
+                          <li>
+                            <Link href="/">
+                              <a
+                                aria-label="Home"
+                                title="Home"
+                                className="font-medium tracking-wide text-slate-900 dark:text-slate-400 inline-flex items-center hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md"
+                              >
+                                Home
+                              </a>
+                            </Link>
+                          </li>
+                          <li>
+                            <Link href="/#about">
+                              <a
+                                aria-label="About"
+                                title="About"
+                                className="font-medium tracking-wide inline-flex items-center hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md"
+                              >
+                                About
+                              </a>
+                            </Link>
+                          </li>
+                          <li>
+                            <Link href="/#projects-section">
+                              <a
+                                aria-label="Contact"
+                                title="Contact"
+                                className="font-medium tracking-wide inline-flex items-center hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md"
+                              >
+                                Contact
+                              </a>
+                            </Link>
+                          </li>
+                          <li>
+                            <Link href="/#projects-section">
+                              <a
+                                aria-label="Our product"
+                                title="Our product"
+                                className="font-medium tracking-wide inline-flex items-center hover:bg-slate-200 active:bg-slate-300 px-2 py-1 rounded-md"
+                              >
+                                Languages
+                              </a>
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                    </nav>
+                  </div>
+                </Popover.Panel>
+              </Transition>
+            </div>
           </div>
         </div>
       </div>
