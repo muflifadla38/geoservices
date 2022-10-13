@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { LeftArrowIcon, RightArrowIcon } from "../components/Icons";
+import Input from "../components/Input";
+import TextArea from "../components/TextArea";
 
 const Home = () => {
   return (
@@ -492,46 +494,22 @@ const Home = () => {
           </div>
           <div className="text-slate-600 dark:text-slate-400">
             <form>
-              <label className="text-sm font-bold">Full Name</label>
-              <input
-                className="w-full bg-slate-200 dark:bg-slate-800 border-transparent text-slate-900 dark:text-slate-100 mt-2 rounded-lg focus:outline-none focus:shadow-outline peer"
-                type="text"
-                placeholder=""
+              <Input label="Name" peer="Please enter your name" />
+              <Input
+                label="Email"
+                type="email"
+                peer="Please enter your email"
               />
-              <p className="my-2 hidden peer-invalid:block text-pink-600 text-sm">
-                Please enter your name
-              </p>
-              <div className="mt-6">
-                <label className="text-sm font-bold">Email</label>
-                <input
-                  className="w-full bg-slate-200 dark:bg-slate-800 border-transparent text-slate-900 dark:text-slate-100 mt-2 rounded-lg focus:outline-none focus:shadow-outline peer"
-                  type="email"
-                />
-                <p className="my-2 hidden peer-invalid:block text-pink-600 text-sm">
-                  Please enter a valid email address
-                </p>
-              </div>
-              <div className="mt-6">
-                <label className="text-sm font-bold">Whatsapp</label>
-                <input
-                  type="tel"
-                  className="w-full bg-slate-200 dark:bg-slate-800 border-transparent text-slate-900 dark:text-slate-100 mt-2 rounded-lg focus:outline-none focus:shadow-outline peer"
-                  placeholder=""
-                />
-                <p className="my-2 hidden peer-invalid:block text-pink-600 text-sm">
-                  Please enter a valid whatsapp number
-                </p>
-              </div>
-              <div className="mt-6">
-                <label className="text-sm font-bold">Message</label>
-                <textarea
-                  title="Message"
-                  className="h-32 w-full bg-slate-200 dark:bg-slate-800 border-transparent text-slate-900 dark:text-slate-100 mt-2 rounded-lg focus:outline-none focus:shadow-outline peer"
-                />
-                <p className="my-2 hidden peer-invalid:block text-pink-600 text-sm">
-                  This field cannot empty
-                </p>
-              </div>
+              <Input
+                label="Whatsapp"
+                type="tel"
+                peer="Please enter a valid whatsapp number"
+              />
+              <TextArea
+                label="Message"
+                peer="Please enter your message"
+                className="h-32"
+              />
               <div className="mt-6 text-right">
                 <button
                   className="text-sm font-bold tracking-wide bg-indigo-500 dark:bg-indigo-800 py-2 px-4 text-slate-100 rounded-lg hover:bg-indigo-600 dark:hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
