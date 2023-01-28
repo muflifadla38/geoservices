@@ -462,7 +462,6 @@ export const NotFoundIcon = ({ ...rest }) => {
       viewBox="0 0 441.85 285.44"
       className="w-full max-w-lg lg:max-w-full mx-auto"
       fill="currentColor"
-      s
       {...rest}
     >
       <style>
